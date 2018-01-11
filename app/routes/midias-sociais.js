@@ -14,7 +14,13 @@ module.exports = function(app) {
         }).then(resultado => {
             console.log(JSON.stringify(resultado));
 
-            //for (let i in resultado.media.nodes.display_src)
+            let posts = resultado.media.nodes;
+            
+            let lastFivePosts = [];
+
+            for (let i = 0; i <= 4; i ++) {
+                lastFivePosts.push(posts[i].display_src);
+            }
 
             var dados = {
                 seguidores: resultado.followed_by.count, 
@@ -26,7 +32,8 @@ module.exports = function(app) {
                 usuario: resultado.username, 
                 comentarios: resultado.media.nodes.caption,
                 url_externa: resultado.external_url,
-                foto: resultado.media.nodes.display_src
+                foto: resultado.media.nodes.display_src,
+                lastFivePosts: lastFivePosts
             };
 
             res.render('pages/profile', {dados});
