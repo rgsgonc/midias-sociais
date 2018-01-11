@@ -14,6 +14,8 @@ module.exports = function(app) {
         }).then(resultado => {
             console.log(JSON.stringify(resultado));
 
+            //for (let i in resultado.media.nodes.display_src)
+
             var dados = {
                 seguidores: resultado.followed_by.count, 
                 seguindo: resultado.follows.count,
