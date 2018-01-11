@@ -12,4 +12,6 @@
 
 ``` npm install --save lodash.take ```
 
+``` npm install --save selenium-webdriver ```
+
 

@@ -1,5 +1,5 @@
 let app = require('./config/server');
 
 app.listen(9090, function(){
-	console.log('Servidor online na porta 9090');
+	console.log('Servidor online 9090');
 });

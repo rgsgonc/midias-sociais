@@ -1,5 +1,5 @@
 module.exports = function(application) {
-	application.get("/", function(req, res) {
+	application.get("/login", function(req, res) {
 		res.render('pages/dashboard');
 	});
 }
