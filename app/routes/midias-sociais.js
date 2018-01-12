@@ -8,7 +8,7 @@ module.exports = function(app) {
             .forBrowser('chrome')
             .build();
 
-        driver.get('https://www.instagram.com/kadalsasso/');
+        driver.get('https://www.instagram.com/ativarinformatica/');
         driver.executeScript(function() {
             return window._sharedData.entry_data.ProfilePage[0].user;
         }).then(resultado => {
