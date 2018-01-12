@@ -12,6 +12,8 @@ module.exports = function(app) {
 
         driver.get('https://www.instagram.com/kadalsasso/');
         driver.executeScript(function() {
+
+             
             return window._sharedData.entry_data.ProfilePage[0].user;
         }).then(resultado => {
             console.log(JSON.stringify(resultado));
